@@ -6,7 +6,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { theme } from "../../global/styles/theme";
 import { styles } from './styles';
-import { categories } from '../../utils/categories';
 
 type Props = RectButtonProps & {
     title: string;

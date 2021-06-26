@@ -9,7 +9,7 @@ import CalendarSvg from '../../../assets/calendar.svg';
 import { GuildIcon } from "../GuildIcon";
 import { categories } from "../../utils/categories";
 import { theme } from "../../global/styles/theme";
-import { GuildProps } from "../Guild";
+import { Guild, GuildProps } from "../Guild";
 import { LinearGradient } from 'expo-linear-gradient'
 
 
@@ -37,7 +37,10 @@ export function Appointment({ data, ...rest }: Props) {
                     style={styles.guildIconContainer}
                     colors={[secondary50, secondary70]}
                 >
-                    <GuildIcon />
+                    <GuildIcon
+                        guildId={data.guild.id}
+                        iconId={data.guild.icon}
+                    />
                 </LinearGradient>
                 <View style={styles.content}>
                     <View style={styles.header}>
